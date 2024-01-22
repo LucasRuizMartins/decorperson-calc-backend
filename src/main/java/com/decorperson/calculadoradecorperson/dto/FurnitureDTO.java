@@ -1,36 +1,44 @@
-package com.decorperson.calculadoradecorperson.entities;
+package com.decorperson.calculadoradecorperson.dto;
 
+import com.decorperson.calculadoradecorperson.entities.Furniture;
+import com.decorperson.calculadoradecorperson.entities.Product;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
 
 import java.util.Objects;
 
-@Entity
-@Table(name = "tb_furnitures")
-public class Furniture{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY )
+public class FurnitureDTO {
+
+
     private Long id;
 
+    @Size(min = 5, max = 120, message = "nome precisa ter entre 5 e 120 caracteres")
+    @NotBlank(message = "Campo requerido")
     private String name;
+    @Positive(message = "O preço deve ser positivo")
     private Integer length;
+    @Positive(message = "O preço deve ser positivo")
     private Integer height;
+    @Positive(message = "O preço deve ser positivo")
     private Integer width;
+
+    @Positive(message = "O preço deve ser positivo")
     private String imgUrl;
 
 
-    public Furniture(Long id, String name, Integer length, Integer height, Integer width, String imgUrl) {
-        this.id = id;
-        this.name = name;
-        this.length = length;
-        this.height = height;
-        this.width = width;
-        this.imgUrl = imgUrl;
+    public FurnitureDTO(Furniture entity) {
+        id = entity.getId();
+        this.name = entity.getName();
+        this.length = entity.getLength();
+        this.height = entity.getHeight();
+        this.width = entity.getWidth();
+        this.imgUrl = entity.getImgUrl();
     }
 
-    public Furniture() {
-
-    }
 
     public Long getId() {
         return id;
@@ -84,8 +92,8 @@ public class Furniture{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Furniture furniture = (Furniture) o;
-        return Objects.equals(id, furniture.id);
+        FurnitureDTO that = (FurnitureDTO) o;
+        return Objects.equals(id, that.id);
     }
 
     @Override
@@ -93,3 +101,5 @@ public class Furniture{
         return 0;
     }
 }
+
+

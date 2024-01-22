@@ -27,3 +27,9 @@ insert into tb_products( img_url, name, price) VALUES ('https://github.com/Lucas
 insert into tb_products( img_url, name, price) VALUES ('https://github.com/LucasRuizMartins/decorperson-calc/blob/main/calculadora_decorperson/src/assets/tubo_aco.png?raw=true', 'Tubo de aço industrial 20x20', 41.66);
 insert into tb_products( img_url, name, price) VALUES ('https://github.com/LucasRuizMartins/decorperson-calc/blob/main/calculadora_decorperson/src/assets/tubo_aco.png?raw=true', 'Tubo de Aço Industrial 60 X 60 X 2,0', 197.46);
 insert into tb_products( img_url, name, price) VALUES ('https://github.com/LucasRuizMartins/decorperson-calc/blob/main/calculadora_decorperson/src/assets/tinta_preta.png?raw=true', 'Tinta preta', 207.0);
+
+insert into tb_furnitures(name,length,height,width,img_url) VALUES ('Balcão com porta de passagem em MDF Alamo Essencial Wood', 3600,1200,600,'https://static.mobly.com.br/p/Politorno-BalcC3A3o-de-Cozinha-Canelone-2-PT-3-GV-Preto-e-Alamo-5787-6819211-3-zoom.jpg');
+insert into tb_furnitures(name,length,height,width,img_url) VALUES ('Armário com 2 portas, 4 gavetas internas, 4 prateleiras em MDF Alamo Essencial Wood',2300,1000,500,'https://product-hub-prd.madeiramadeira.com.br/112869733/images/1e265166-a569-410e-b710-c12aded09f8415148048847autes02.jpg');
+insert into tb_furnitures(name,length,height,width,img_url) VALUES ('Armário Pequeno MDF Alamo Essencial Wood', 1500, 1200,400, 'https://cdn.dooca.store/43368/products/hyn7rcbw8rtoylf102noceqzrbcr8ii5iosj_640x640+fill_ffffff.png?v=1655996742&webp=0');
+insert into tb_furnitures(name,length,height,width,img_url) VALUES ('Mesa de Cabeceira Jandira 1 GV Oak', 500 , 500, 400, 'https://static.mobly.com.br/p/Completa-MC3B3veis-Mesa-de-Cabeceira-Jandira-1-GV-Oak-6591-622698-1-zoom.jpg');
+
