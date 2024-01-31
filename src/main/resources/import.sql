@@ -33,3 +33,8 @@ insert into tb_furnitures(name,length,height,width,img_url) VALUES ('Armário co
 insert into tb_furnitures(name,length,height,width,img_url) VALUES ('Armário Pequeno MDF Alamo Essencial Wood', 1500, 1200,400, 'https://cdn.dooca.store/43368/products/hyn7rcbw8rtoylf102noceqzrbcr8ii5iosj_640x640+fill_ffffff.png?v=1655996742&webp=0');
 insert into tb_furnitures(name,length,height,width,img_url) VALUES ('Mesa de Cabeceira Jandira 1 GV Oak', 500 , 500, 400, 'https://static.mobly.com.br/p/Completa-MC3B3veis-Mesa-de-Cabeceira-Jandira-1-GV-Oak-6591-622698-1-zoom.jpg');
 
+insert into tb_budget(month_year,client_first_name,client_name,date,budget_name,project_time,total_price) VALUES('Nov-2023', 'Lucas', 'Lucas Ruiz Martins', '2023-11-01', 'Projecto Um' , 30, 4850.50);
+
+insert into tb_budget_furniture(budget_id, furniture_id) VALUES (1,1);
+insert into tb_budget_furniture(budget_id, furniture_id) VALUES (1,2);
+insert into tb_budget_furniture(budget_id, furniture_id) VALUES (1,3);

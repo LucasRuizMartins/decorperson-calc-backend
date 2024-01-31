@@ -26,7 +26,6 @@ public class FurnitureDTO {
     @Positive(message = "O preço deve ser positivo")
     private Integer width;
 
-    @Positive(message = "O preço deve ser positivo")
     private String imgUrl;
 
 
@@ -37,6 +36,10 @@ public class FurnitureDTO {
         this.height = entity.getHeight();
         this.width = entity.getWidth();
         this.imgUrl = entity.getImgUrl();
+    }
+
+    public FurnitureDTO() {
+
     }
 
 

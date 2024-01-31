@@ -1,8 +1,11 @@
 package com.decorperson.calculadoradecorperson.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "tb_furnitures")
@@ -18,6 +21,9 @@ public class Furniture{
     private Integer width;
     private String imgUrl;
 
+    @ManyToMany(mappedBy = "furnitures")
+    @JsonIgnore
+     private Set<Budget> budgets = new HashSet<>();
 
     public Furniture(Long id, String name, Integer length, Integer height, Integer width, String imgUrl) {
         this.id = id;
@@ -91,5 +97,10 @@ public class Furniture{
     @Override
     public int hashCode() {
         return 0;
+    }
+
+
+    public Set<Budget> getBudgets() {
+        return budgets;
     }
 }
